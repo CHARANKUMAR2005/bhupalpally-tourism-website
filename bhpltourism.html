@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Bhupalpally District Tourism</title>
+  <style>
+    /* Mobile-first redesign */
+    body { margin:0; font-family:Arial, sans-serif; background:#eef2f5; color:#333; }
+    nav a, nav button { display:inline-block; padding:8px; }
+    @media (max-width:768px){
+      nav { display:flex; flex-wrap:wrap; justify-content:center; }
+      header h1 { font-size:22px; }
+      .card img { height:150px; }
+    }
+    body { margin:0; font-family:Arial, sans-serif; background:#eef2f5; color:#333; }
+    header { background:#0d4f8b; color:white; padding:40px 20px; text-align:center; }
+    nav { background:#1a202c; padding:10px; text-align:center; }
+    nav a, nav button { color:white; margin:0 10px; text-decoration:none; font-weight:bold; background:none; border:none; cursor:pointer; }
+    nav a:hover { text-decoration:underline; }
+    .container { max-width:1100px; margin:auto; padding:30px; }
+    h2 { color:#0d4f8b; }
+    .places, .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+    .card { background:white; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); overflow:hidden; }
+    .card img { width:100%; height:180px; object-fit:cover; cursor:pointer; }
+    .card-content { padding:15px; }
+    .map-button { display:inline-block; margin-top:10px; padding:8px 12px; background:#0d4f8b; color:white; text-decoration:none; border-radius:5px; font-size:14px; }
+    footer { background:#1a202c; color:white; text-align:center; padding:15px; }
+
+    /* Lightbox */
+    .lightbox { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000; }
+    .lightbox img { max-width:90%; max-height:90%; border:5px solid white; }
+
+    /* Contact form */
+    form { background:white; padding:20px; border-radius:10px; max-width:600px; }
+    input, textarea { width:100%; padding:10px; margin:10px 0; }
+    button.submit { background:#0d4f8b; color:white; padding:10px 15px; border:none; cursor:pointer; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 id="title">Visiting Places of Bhupalpally District</h1>
+  <p id="subtitle">Your guide to nature, culture & heritage</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#places">Places</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+  <button onclick="setLang('en')">English</button>
+  <button onclick="setLang('te')">తెలుగు</button>
+</nav>
+
+<div class="container" id="home">
+  <h2 id="welcome">Welcome</h2>
+  <p id="welcomeText">Bhupalpally district in Telangana is known for forests, rivers, temples and tribal culture.</p>
+</div>
+
+<div class="container" id="places">
+  <h2 id="placesTitle">Popular Visiting Places</h2>
+  <p style="font-size:14px;color:#555">Tap maps to navigate directly</p>
+  <h2 id="placesTitle">Popular Visiting Places</h2>
+  <div class="places">
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Laknavaram_lake.JPG"><div class="card-content"><h3>Laknavaram Lake</h3><p>Beautiful lake with hanging bridge.</p><a class="map-button" href="https://maps.google.com?q=Laknavaram+Lake" target="_blank">View Map</a></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Ramappa_temple_front.jpg"><div class="card-content"><h3>Ramappa Temple</h3><p>UNESCO World Heritage Site.</p><a class="map-button" href="https://maps.google.com?q=Ramappa+Temple" target="_blank">View Map</a></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Eturnagaram_Wildlife_Sanctuary_%28Forest%29.jpg"><div class="card-content"><h3>Eturnagaram Wildlife Sanctuary</h3><p>Forest & wildlife along Godavari.</p><a class="map-button" href="https://maps.google.com?q=Eturnagaram+Wildlife+Sanctuary" target="_blank">View Map</a></div></div>
+    <div class="card"><img src="https://images.pexels.com/photos/11158086/pexels-photo-11158086.jpeg"><div class="card-content"><h3>Godavari River View Points</h3><p>Peaceful river views.</p><a class="map-button" href="https://maps.google.com?q=Godavari+River+Bhupalpally" target="_blank">View Map</a></div></div>
+    <div class="card"><img src="https://images.pexels.com/photos/210675/pexels-photo-210675.jpeg"><div class="card-content"><h3>Tribal Villages & Yamanpalli Temples</h3><p>Experience tribal life and village temples.</p><a class="map-button" href="https://maps.google.com?q=Yamanpalli+Village+Bhupalpally" target="_blank">View Map</a></div></div>
+  </div>
+<div class="container" id="maps">
+  <h2>📍 Location Maps</h2>
+  <iframe src="https://www.google.com/maps?q=Laknavaram%20Lake%20Telangana&output=embed" width="100%" height="300" style="border:0;border-radius:10px" loading="lazy"></iframe><br><br>
+  <iframe src="https://www.google.com/maps?q=Ramappa%20Temple&output=embed" width="100%" height="300" style="border:0;border-radius:10px" loading="lazy"></iframe><br><br>
+  <iframe src="https://www.google.com/maps?q=Eturnagaram%20Wildlife%20Sanctuary&output=embed" width="100%" height="300" style="border:0;border-radius:10px" loading="lazy"></iframe>
+</div>
+
+<div class="container" id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Laknavaram_lake.JPG" onclick="openLightbox(this.src)">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Ramappa_temple_front.jpg" onclick="openLightbox(this.src)">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Eturnagaram_Wildlife_Sanctuary_%28Forest%29.jpg" onclick="openLightbox(this.src)">
+    <img src="https://images.pexels.com/photos/11158086/pexels-photo-11158086.jpeg" onclick="openLightbox(this.src)">
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="this.style.display='none'">
+  <img id="lightboxImg">
+</div>
+
+<div class="container" id="contact">
+  <h2>Contact & Guide</h2>
+  <p><strong>Guide Name:</strong> Charan</p>
+  <p><strong>Phone:</strong> 7095027310</p>
+  <p><strong>Email:</strong> crazycharan43@gmail.com</p>
+
+  <h3>Send Message</h3>
+  <form action="mailto:crazycharan43@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button class="submit" type="submit">Send</button>
+  </form>
+</div>
+
+<footer>
+  <p>© 2026 Bhupalpally Tourism</p>
+</footer>
+
+<script>
+  function openLightbox(src){ document.getElementById('lightboxImg').src = src; document.getElementById('lightbox').style.display='flex'; }
+
+  function setLang(lang){
+    if(lang==='te'){
+      document.getElementById('title').innerText='భూపాలపల్లి జిల్లా దర్శన స్థలాలు';
+      document.getElementById('subtitle').innerText='ప్రకృతి, సంస్కృతి మరియు వారసత్వానికి మార్గదర్శకం';
+      document.getElementById('welcome').innerText='స్వాగతం';
+      document.getElementById('welcomeText').innerText='భూపాలపల్లి జిల్లా అడవులు, నదులు, దేవాలయాలు మరియు గిరిజన సంస్కృతికి ప్రసిద్ధి.';
+      document.getElementById('placesTitle').innerText='ప్రసిద్ధ దర్శన స్థలాలు';
+    } else {
+      document.getElementById('title').innerText='Visiting Places of Bhupalpally District';
+      document.getElementById('subtitle').innerText='Your guide to nature, culture & heritage';
+      document.getElementById('welcome').innerText='Welcome';
+      document.getElementById('welcomeText').innerText='Bhupalpally district in Telangana is known for forests, rivers, temples and tribal culture.';
+      document.getElementById('placesTitle').innerText='Popular Visiting Places';
+    }
+  }
+</script>
+
+</body>
+</html>
