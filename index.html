@@ -1,227 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bhupalpally Tourism</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial;background:#f4f6ff;color:#222}
-
-/* Header */
-header{
-background:linear-gradient(135deg,#ff512f,#dd2476);
-color:white;text-align:center;padding:35px
+body,html{
+margin:0;height:100%;font-family:Arial;color:white
 }
 
-/* Navbar */
-nav{
-position:sticky;top:0;
-background:#111827;
-padding:10px;text-align:center;z-index:10
-}
-nav a, nav button{
-color:white;text-decoration:none;
-margin:5px;padding:8px 14px;
-background:#374151;border-radius:20px;
-font-size:14px;border:none;cursor:pointer
-}
-nav a:hover, nav button:hover{background:#4f46e5}
-
-/* Sections */
-section{padding:40px 20px}
-.container{max-width:1100px;margin:auto}
-h2{text-align:center;color:#4f46e5;margin-bottom:25px}
-
-/* Cards */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px
-}
-.card{
-background:white;border-radius:14px;
-overflow:hidden;box-shadow:0 6px 14px rgba(0,0,0,.1)
-}
-.card img{width:100%;height:180px;object-fit:cover}
-.card div{padding:15px}
-
-/* Gallery */
-.gallery img{
-width:100%;
-border-radius:14px;
-cursor:pointer;
-box-shadow:0 4px 10px rgba(0,0,0,.2)
-}
-
-/* Lightbox */
-#lightbox{
-display:none;
+.bg{
 position:fixed;
 top:0;left:0;
 width:100%;height:100%;
-background:rgba(0,0,0,.9);
+background-size:cover;
+background-position:center;
+animation:bgslide 15s infinite;
+z-index:-1
+}
+
+@keyframes bgslide{
+0%{background-image:url("images/medaram1.jpg")}
+33%{background-image:url("images/medaram2.jpg")}
+66%{background-image:url("images/medaram3.jpg")}
+}
+
+nav{
+text-align:center;
+padding:15px;
+background:rgba(0,0,0,.6)
+}
+nav a{
+color:white;
+margin:10px;
+padding:10px 18px;
+text-decoration:none;
+border:1px solid white;
+border-radius:25px
+}
+nav a:hover{background:white;color:black}
+
+.center{
+height:80vh;
+display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
-z-index:100
-}
-#lightbox img{
-max-width:90%;
-max-height:90%;
-border-radius:10px
-}
-
-/* Map */
-iframe{
-width:100%;height:300px;border:0;
-border-radius:14px;margin-bottom:25px
-}
-
-/* Contact */
-.contact-box{
-background:white;padding:25px;
-border-radius:16px;
-box-shadow:0 6px 14px rgba(0,0,0,.1);
-max-width:500px;margin:auto;text-align:center
-}
-
-footer{
-background:#111827;color:white;
-text-align:center;padding:18px;font-size:14px
+text-align:center;
+background:rgba(0,0,0,.4)
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1 data-en="Visiting Places of Bhupalpally District"
-    data-te="భూపాలపల్లి జిల్లా సందర్శన ప్రదేశాలు">
-Visiting Places of Bhupalpally District</h1>
-
-<p data-en="Nature • Culture • Temples • Rivers"
-   data-te="ప్రకృతి • సంస్కృతి • ఆలయాలు • నదులు">
-Nature • Culture • Temples • Rivers</p>
-</header>
+<div class="bg"></div>
 
 <nav>
-<a href="#home">Home</a>
-<a href="#places">Places</a>
-<a href="#gallery">Gallery</a>
-<a href="#maps">Maps</a>
-<a href="#contact">Contact</a>
-<button onclick="setLang('en')">English</button>
-<button onclick="setLang('te')">తెలుగు</button>
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="maps.html">Maps</a>
+<a href="contact.html">Contact</a>
 </nav>
 
-<section id="home">
-<div class="container">
-<h2 data-en="Welcome" data-te="స్వాగతం">Welcome</h2>
-<p style="text-align:center"
-data-en="Explore wildlife, rivers, temples and tribal culture of Bhupalpally."
-data-te="భూపాలపల్లి యొక్క అడవులు, నదులు, ఆలయాలు మరియు గిరిజన సంస్కృతిని అన్వేషించండి.">
-Explore wildlife, rivers, temples and tribal culture of Bhupalpally.
-</p>
+<div class="center">
+<h1>Bhupalpally Tourism</h1>
+<p>Eturnagaram • Godavari • Medaram • Yamanpalli</p>
 </div>
-</section>
-
-<section id="places">
-<div class="container">
-<h2 data-en="Tourist Places" data-te="పర్యాటక ప్రదేశాలు">Tourist Places</h2>
-
-<div class="grid">
-
-<div class="card">
-<img src="images/eturnagaram.jpg">
-<div>
-<h3 data-en="Eturnagaram Wildlife Sanctuary"
-    data-te="ఏటూర్నాగారం వన్యప్రాణి అభయారణ్యం">
-Eturnagaram Wildlife Sanctuary</h3>
-</div>
-</div>
-
-<div class="card">
-<img src="images/godavari.jpg">
-<div>
-<h3 data-en="Godavari River View Points"
-    data-te="గోదావరి నది వీక్షణ స్థలాలు">
-Godavari River View Points</h3>
-</div>
-</div>
-
-<div class="card">
-<img src="images/yamanpalli.jpg">
-<div>
-<h3 data-en="Yamanpalli Village Temples"
-    data-te="యమనపల్లి గ్రామ ఆలయాలు">
-Yamanpalli Village Temples</h3>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<section id="gallery">
-<div class="container">
-<h2 data-en="Gallery" data-te="గ్యాలరీ">Gallery</h2>
-
-<div class="grid gallery">
-<img src="images/eturnagaram.jpg" onclick="openLightbox(this)">
-<img src="images/godavari.jpg" onclick="openLightbox(this)">
-<img src="images/yamanpalli.jpg" onclick="openLightbox(this)">
-<img src="images/temple1.jpg" onclick="openLightbox(this)">
-<img src="images/temple2.jpg" onclick="openLightbox(this)">
-</div>
-
-</div>
-</section>
-
-<section id="maps">
-<div class="container">
-<h2>📍 Maps</h2>
-
-<iframe src="https://www.google.com/maps?q=Eturnagaram%20Wildlife%20Sanctuary&output=embed"></iframe>
-<iframe src="https://www.google.com/maps?q=Godavari%20River%20Bhupalpally&output=embed"></iframe>
-<iframe src="https://www.google.com/maps?q=Yamanpalli%20Jayashankar%20Bhupalpally%20Telangana&output=embed"></iframe>
-
-</div>
-</section>
-
-<section id="contact">
-<div class="container">
-<h2 data-en="Contact & Guide" data-te="సంప్రదింపు & గైడ్">Contact & Guide</h2>
-
-<div class="contact-box">
-<h3>Pilumari Charan Kumar</h3>
-<p>📞 7095027310</p>
-<p>✉️ crazycharan43@gmail.com</p>
-</div>
-</div>
-</section>
-
-<footer>
-© 2026 Bhupalpally Tourism
-</footer>
-
-<!-- Lightbox -->
-<div id="lightbox" onclick="this.style.display='none'">
-<img id="lightbox-img">
-</div>
-
-<script>
-function openLightbox(img){
-document.getElementById("lightbox").style.display="flex";
-document.getElementById("lightbox-img").src=img.src;
-}
-
-function setLang(lang){
-document.querySelectorAll("[data-en]").forEach(el=>{
-el.innerText = el.getAttribute("data-"+lang);
-});
-}
-</script>
 
 </body>
 </html>
